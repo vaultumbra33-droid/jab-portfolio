@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAB // Full Stack Dev — Ciberseguridad · Drones & UAV · Impresión 3D</title>
+  <meta name="description" content="Jesús Antonio Bustamante Araujo: full stack, ciberseguridad, drones & UAV, impresión 3D, electrónica y telecomunicaciones. Remoto / freelance / por proyecto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&gt;_</text></svg>">
+  <link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+  <canvas id="rain" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="topbar-title">jab@core: ~/portfolio</span>
+    </div>
+    <nav class="topbar-nav">
+      <a href="#home" class="active">&gt;_ home</a>
+      <a href="#about">&gt;_ about</a>
+      <a href="#skills">&gt;_ skills</a>
+      <a href="#projects">&gt;_ specialties</a>
+      <a href="#shipped">&gt;_ entregados</a>
+      <a href="#contact">&gt;_ contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home" class="hero">
+      <div class="terminal" data-tilt>
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">zsh — jab.core</span>
+        </div>
+        <div class="terminal-body" id="termOut" aria-live="polite"></div>
+        <div class="terminal-input">
+          <span class="prompt">jab@core<span class="accent">:</span>~<span class="dollar">$</span></span>
+          <span id="typeTarget" class="typed"></span><span class="cursor-block"></span>
+        </div>
+      </div>
+
+      <div class="hero-tagline reveal">
+        <h1>Full Stack <span class="grad">&amp;&nbsp;Hardware</span></h1>
+        <p>Del código al circuito al vuelo: desarrollo full stack, ciberseguridad,
+        drones &amp; UAV, impresión 3D industrial, electrónica IoT y telecomunicaciones.
+        Ideas disruptivas → soluciones de alto impacto.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-green">./ver_especialidades</a>
+          <a href="#contact" class="btn btn-ghost">contact jab::core</a>
+          <a href="#home" class="btn btn-ghost drone-launch" data-tip='man drone — "vuela porque tu CV no lo hace solo"'>⇗ sudo ./pilot_drone</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2 class="section-title reveal"><span class="accent">#</span> about_jab</h2>
+      <div class="about-grid">
+        <div class="about-card reveal" data-tilt>
+          <h3>// perfil</h3>
+          <p>Profesional tecnológico multidisciplinario con dominio de desarrollo full stack,
+          ciberseguridad, electrónica, drones e impresión 3D industrial.
+          Investigador nato (Eneagrama Tipo 5) con visión de pionero.</p>
+          <ul class="meta-list">
+            <li><span class="key">nombre:</span> Jesús Antonio Bustamante Araujo</li>
+            <li><span class="key">alias:</span> JAB · J. Bustamante</li>
+            <li><span class="key">base:</span> Culiacán, Sinaloa MX · reubicación OK</li>
+            <li><span class="key">modalidad:</span> remoto · freelance · por proyecto · alta presión</li>
+            <li><span class="key">estado:</span> <span class="ok">● accepting_projects</span></li>
+          </ul>
+        </div>
+        <div class="about-card reveal" data-tilt>
+          <h3>// bits de dominio</h3>
+          <div class="stat rows">
+            <div class="stat-row"><span class="label">Full stack</span><div class="bar"><i style="--w:92%"></i></div><span>92%</span></div>
+            <div class="stat-row"><span class="label">Impresión 3D</span><div class="bar"><i style="--w:92%"></i></div><span>92%</span></div>
+            <div class="stat-row"><span class="label">Drones &amp; UAV</span><div class="bar"><i style="--w:90%"></i></div><span>90%</span></div>
+            <div class="stat-row"><span class="label">Ciberseguridad</span><div class="bar"><i style="--w:88%"></i></div><span>88%</span></div>
+            <div class="stat-row"><span class="label">Electrónica</span><div class="bar"><i style="--w:80%"></i></div><span>80%</span></div>
+            <div class="stat-row"><span class="label">Telecom</span><div class="bar"><i style="--w:80%"></i></div><span>80%</span></div>
+            <div class="stat-row"><span class="label">Retroingeniería</span><div class="bar"><i style="--w:80%"></i></div><span>80%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2 class="section-title reveal"><span class="accent">#</span> skills</h2>
+      <p class="section-sub reveal">$ tree -L 2 ~/jab/skills</p>
+      <div class="skills-grid">
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">{ }</div>
+          <h3>Full Stack</h3>
+          <div class="tags"><span>JavaScript</span><span>Node.js</span><span>React</span><span>Python</span><span>PHP</span><span>MySQL</span><span>MongoDB</span><span>Docker</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">##</div>
+          <h3>Ciberseguridad</h3>
+          <div class="tags"><span>Kali Linux</span><span>Nmap</span><span>Metasploit</span><span>Wireshark</span><span>Burp Suite</span><span>pfSense</span><span>IDS/IPS</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">&lt;⇗&gt;</div>
+          <h3>Drones &amp; UAV</h3>
+          <div class="tags"><span>FPV</span><span>ArduPilot</span><span>Betaflight</span><span>ESC repair</span><span>Brushless</span><span>FC</span><span>Payloads</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">[3D]</div>
+          <h3>Impresión &amp; Manufactura</h3>
+          <div class="tags"><span>FDM</span><span>Resina UV</span><span>Prusa</span><span>Voron</span><span>CoreXY</span><span>QA industrial</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">⚡_</div>
+          <h3>Electrónica &amp; IoT</h3>
+          <div class="tags"><span>Arduino</span><span>ESP32</span><span>RFID</span><span>Embebidos</span><span>Prototipado</span><span>HW+SW</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">#~</div>
+          <h3>Telecom &amp; Servidores</h3>
+          <div class="tags"><span>Mikrotik</span><span>VPN corporativas</span><span>Enlaces P2P</span><span>Servidores</span><span>Retroingeniería</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">[IA]</div>
+          <h3>IA Local</h3>
+          <div class="tags"><span>Ollama</span><span>llama.cpp</span><span>LLMs selfhosted</span><span>Whisper</span><span>Stable Diffusion</span><span>Embeddings</span><span>RAG</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">[data]</div>
+          <h3>Análisis de Datos</h3>
+          <div class="tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>SQL avanzado</span><span>Jupyter</span><span>Matplotlib</span><span>Web scraping</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">&lt;/&gt;</div>
+          <h3>Programación</h3>
+          <div class="tags"><span>JavaScript</span><span>Python</span><span>PHP</span><span>C/C++</span><span>Bash</span><span>POO</span><span>Algoritmos</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">[auto]</div>
+          <h3>Automatización & Bots</h3>
+          <div class="tags"><span>Bots</span><span>Cron jobs</span><span>Scraping</span><span>APIs</span><span>Workflows</span><span>ETL</span></div>
+        </div>
+        <div class="skill-card reveal" data-tilt>
+          <div class="skill-icon">#daemon</div>
+          <h3>Sistemas & Linux</h3>
+          <div class="tags"><span>Arch/Debian</span><span>systemd</span><span>Bash/SSH</span><span>Nginx</span><span>Docker</span><span>Vim</span><span>Git</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section-title reveal"><span class="accent">#</span> specialties</h2>
+      <p class="section-sub reveal">$ ls -la ~/jab/services | grep -i "alto-impacto"</p>
+      <div class="projects-grid">
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top">
+            <span class="folder">[.&gt;]</span>
+            <div class="project-links"><a href="#contact">mail</a><a href="#contact">▸ tel</a></div>
+          </div>
+          <h3>Apps web &amp; móviles</h3>
+          <p>Construcción end-to-end de aplicaciones: frontend, backend, base de datos, despliegue en producción y arquitecturas escalables.</p>
+          <div class="tags"><span>Node.js</span><span>React</span><span>MySQL/Mongo</span><span>Docker</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top">
+            <span class="folder">[##]</span>
+            <div class="project-links"><a href="#contact">mail</a><a href="#contact">▸ tel</a></div>
+          </div>
+          <h3>Auditoría &amp; Pentesting</h3>
+          <p>Aseguramiento de infraestructura: ethical hacking, hardening, IDS/IPS, firewalls y respuesta a incidentes con reporte ejecutivo.</p>
+          <div class="tags"><span>Kali</span><span>Metasploit</span><span>Burp</span><span>pfSense</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top">
+            <span class="folder">[⇗]</span>
+            <div class="project-links"><a href="#contact">mail</a><a href="#contact">▸ tel</a></div>
+          </div>
+          <h3>Drones custom &amp; UAV industrial</h3>
+          <p>Diseño y construcción de drones con payloads industriales y vuelo autónomo. Reparación avanzada de ESCs, motores brushless y flight controllers.</p>
+          <div class="tags"><span>ArduPilot</span><span>Betaflight</span><span>FPV</span><span>Autonomía</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top">
+            <span class="folder">[3D]</span>
+            <div class="project-links"><a href="#contact">mail</a><a href="#contact">▸ tel</a></div>
+          </div>
+          <h3>Fábrica de piezas 3D</h3>
+          <p>Montaje y operación de producción en serie FDM/resina con control de calidad industrial. Ensamble de impresoras desde cero (Prusa, Voron, CoreXY).</p>
+          <div class="tags"><span>FDM</span><span>UV</span><span>Voron</span><span>CoreXY</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top">
+            <span class="folder">[⚡]</span>
+            <div class="project-links"><a href="#contact">mail</a><a href="#contact">▸ tel</a></div>
+          </div>
+          <h3>Electrónica &amp; IoT a medida</h3>
+          <p>Circuitos, prototipado con Arduino/ESP32, integración RFID y sistemas embebidos. Hardware y software pensados juntos.</p>
+          <div class="tags"><span>Arduino</span><span>ESP32</span><span>RFID</span><span>IoT</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top">
+            <span class="folder">[#~]</span>
+            <div class="project-links"><a href="#contact">mail</a><a href="#contact">▸ tel</a></div>
+          </div>
+          <h3>Redes &amp; conectividad crítica</h3>
+          <p>Servidores, enlaces punto a punto, VPN corporativas y redes Mikrotik. Conectividad confiable en entornos críticos y remotos.</p>
+          <div class="tags"><span>Mikrotik</span><span>VPN</span><span>pfSense</span><span>Servidores</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="shipped" class="section">
+      <h2 class="section-title reveal"><span class="accent">#</span> proyectos_entregados</h2>
+      <p class="section-sub reveal">$ history | grep "producción" — lo que ya está corriendo en el mundo real</p>
+      <div class="projects-grid">
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[01]</span></div>
+          <h3>Telecomunicaciones P2P</h3>
+          <p>Enlaces punto a punto y conectividad crítica: redes remotas, VPN y enlaces dedicados operando 24/7.</p>
+          <div class="tags"><span>Mikrotik</span><span>P2P</span><span>VPN</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[02]</span></div>
+          <h3>Puntos de venta (POS)</h3>
+          <p>Sistemas de cobro para negocios de todo tipo: inventario, tickets, corte de caja y reportes en vivo.</p>
+          <div class="tags"><span>POS</span><span>Inventario</span><span>Impresión térmica</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[03]</span></div>
+          <h3>Kioscos auto-pago</h3>
+          <p>Self-service con UI táctil a prueba de usuarios e integración hardware: pagos, tickets y acceso.</p>
+          <div class="tags"><span>Kiosco</span><span>Táctil</span><span>Self-service</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[04]</span></div>
+          <h3>Pagos online · Android &amp; iOS</h3>
+          <p>Pasarelas de pago integradas en apps móviles: cobros rápidos, seguros y con experiencia nativa.</p>
+          <div class="tags"><span>Pagos</span><span>Android</span><span>iOS</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[05]</span></div>
+          <h3>Facturación 4.0</h3>
+          <p>Facturación electrónica automatizada conectada al POS: timbrado, complementos y cumplimiento fiscal.</p>
+          <div class="tags"><span>CFDI</span><span>Automatización</span><span>Fiscal</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[06]</span></div>
+          <h3>Sistemas de análisis de información</h3>
+          <p>Dashboards y pipelines que convierten datos crudos en decisiones: ETL, KPIs y reportes accionables.</p>
+          <div class="tags"><span>ETL</span><span>Dashboards</span><span>SQL/Pandas</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[07]</span></div>
+          <h3>Bots de finanzas, noticias &amp; automatización</h3>
+          <p>Agentes que vigilan mercados, resumen noticias y ejecutan tareas repetitivas — con IA local cuando hace falta.</p>
+          <div class="tags"><span>Bots</span><span>IA local</span><span>Scraping</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[08]</span></div>
+          <h3>Visión artificial</h3>
+          <p>Conteo de personas, autos, baches y rostros en vivo con cámaras y modelos corriendo en el borde (edge), no en la nube.</p>
+          <div class="tags"><span>OpenCV</span><span>YOLO</span><span>Edge AI</span><span>Cámaras</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[09]</span></div>
+          <h3>Agentes IA — empleados digitales autónomos</h3>
+          <p>Agentes que trabajan solos: atienden, deciden, ejecutan y reportan. Tu startup sin contratar más personal.</p>
+          <div class="tags"><span>LLMs</span><span>Ollama</span><span>Tool-calling</span><span>Autónomos</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[10]</span></div>
+          <h3>Exchange de criptomonedas</h3>
+          <p>Plataforma de compra-venta de cripto: wallets, órdenes, liquidez y seguridad operando en tiempo real.</p>
+          <div class="tags"><span>Crypto</span><span>Wallets</span><span>Trading</span></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="folder">[11]</span></div>
+          <h3>Blockchain financiero &amp; administrativo</h3>
+          <p>Registros inmutables para dinero y trámites: trazabilidad total, smart contracts y auditoría a prueba de mentiras.</p>
+          <div class="tags"><span>Smart contracts</span><span>Trazabilidad</span><span>Auditoría</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2 class="section-title reveal"><span class="accent">#</span> contact</h2>
+      <p class="section-sub reveal">$ ping antonio.bustamante33 gmail — 0% packet loss</p>
+      <div class="contact-card reveal" data-tilt>
+        <p>Tú traes el reto; yo me pongo a tu lado.<br>
+        Cruzamos juntos la parte difícil, enfrentamos lo que haga falta,<br>
+        y volvemos con algo que antes no tenías: <b>tu sistema funcionando en producción</b>.</p>
+        <a href="mailto:antonio.bustamante33@gmail.com" class="btn btn-green big">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          echo "hello" | mail jab
+        </a>
+        <div class="contact-actions">
+          <a class="btn btn-wa" href="https://wa.me/526466871670?text=Hola%20JAB%2C%20me%20interesa%20un%20proyecto%20%F0%9F%9A%80" target="_blank" rel="noopener">
+            <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            WhatsApp
+          </a>
+          <a class="btn btn-tg" href="https://t.me/jab_bustamante" target="_blank" rel="noopener">
+            <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.03.014-.14-.053-.198-.066-.057-.164-.038-.244-.023-.083.015-1.42.902-4.01 2.648-.38.26-.723.388-1.03.38-.336-.006-.984-.19-1.468-.344-.592-.19-1.062-.292-1.04-.615.01-.168.244-.34.69-.517 2.703-1.177 4.503-1.953 5.399-2.328 2.57-1.069 3.104-1.254 3.453-1.26z"/></svg>
+            Telegram
+          </a>
+          <a class="btn btn-ghost" download="Jesus_Antonio_Bustamante_Araujo.vcf" href="assets/contacto_jab.vcf">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+            agregar a contactos
+          </a>
+        </div>
+        <div class="qr-block reveal">
+          <figure>
+            <img src="assets/qr_contacto.png" alt="QR de contacto: WhatsApp, teléfono y correo" width="150" height="150">
+            <figcaption class="mono">&gt;_ escanea = agrégame, así de simple</figcaption>
+          </figure>
+        </div>
+        <div class="socials">
+          <a href="tel:+526466871670">+52 (646) 687-1670 /</a>
+          <a href="#contact">GitHub /</a>
+          <a href="#contact">LinkedIn /</a>
+          <a href="cv_bustamante_v3.pdf">CV.pdf</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="accent">$</span> exit 0 <span class="faded">— © 2026 Jesús Antonio Bustamante Araujo. Hecho a mano con Vim y café.</span>
+  </footer>
+
+  <!-- ====== MINI-JUEGO: drone.core flight sim ====== -->
+  <div class="drone-modal" id="droneModal" aria-hidden="true">
+    <div class="drone-frame">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">drone.core — flight_sim.action</span>
+        <button class="drone-close" id="droneClose" title="cerrar (ESC)">[ × cerrar ]</button>
+      </div>
+      <div class="drone-stage">
+        <canvas id="droneCanvas"></canvas>
+        <div class="drone-hud mono" id="droneHud">
+          <span>score: <b id="hudScore">0000</b></span>
+          <span>integrity: <b id="hudInt" class="ok">100%</b></span>
+          <span>speed: <b id="hudSpd">1.0x</b></span>
+          <span class="dim">[ mouse / flechas ] evita los firewalls rojos</span>
+        </div>
+        <div class="drone-panic mono" id="dronePanic" hidden>
+          <p class="panic-head">[  <b>FAIL</b>  ] drone.core — integrity 0%</p>
+          <p class="dim" id="panicMsg">kernel panic not syncing: attempt to fly past... killed. score final <b id="panicScore">0</b></p>
+          <button class="btn btn-green" id="droneRestart">sudo reboot --drone</button>
+        </div>
+        <div class="drone-intro mono" id="droneIntro" hidden>
+          <p class="intro-head">jab@core:~$ ./pilot_drone --mission</p>
+          <p class="dim"> penetrating the corporate perimeter by air.<br> dodging 3 firewalls = post-kill privilege escalation.<br> mouse o flechas para pilotar.</p>
+          <button class="btn btn-green" id="droneStart">./takeoff --now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/scene3d.js?v=5"></script>
+  <script src="js/main.js?v=3"></script>
+  <script src="js/drone.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J. Bustamante — Full Stack Developer | Ciberseguridad | Drones & UAV | Impresión 3D</title>
+  <meta name="description" content="Profesional tecnológico multidisciplinario: desarrollo full stack, ciberseguridad, drones e UAV, impresión 3D industrial, electrónica IoT y telecomunicaciones. Remoto / freelance / por proyecto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Barra institucional -->
+  <div class="insta-bar">
+    <span class="mono">jab.bustamante.dev</span>
+    <div class="insta-right">
+      <span class="mono status"><i class="dot-ok"></i> DISPONIBLE — REMOTO / FREELANCE / POR PROYECTO</span>
+      <span class="mono">CULIACÁN, SINALOA MX · REUBICACIÓN OK</span>
+    </div>
+  </div>
+
+  <!-- Nav principal -->
+  <nav class="glass-nav">
+    <span class="logo">⚡ <b>J. Bustamante</b></span>
+    <div class="nav-links">
+      <a href="#about">Perfil</a>
+      <a href="#skills">Capacidades</a>
+      <a href="#projects">Especialidades</a>
+      <a href="#certs">Formación</a>
+      <a href="#contact" class="pill">Contacto</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============== HERO ============== -->
+    <section id="home" class="hero">
+      <div class="hero-words">
+        <p class="eyebrow mono">// FULL STACK · CIBERSEGURIDAD · DRONES · 3D · ELECTRÓNICA · TELECOM</p>
+        <h1 class="hero-title">
+          <span class="line">Diseño.</span>
+          <span class="line">Construyo.</span>
+          <span class="line grad">Protejo.</span>
+        </h1>
+        <p class="hero-sub">
+          Profesional tecnológico multidisciplinario: convierte ideas disruptivas en
+          soluciones técnicas de alto impacto — del código al hardware.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn dark">Ver especialidades</a>
+          <a href="mailto:antonio.bustamante33@gmail.com" class="btn ghost mono">$ agendar_reunion</a>
+        </div>
+      </div>
+
+      <!-- Terminal estilo Linux -->
+      <div class="terminal glass-card" id="heroTerm">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="mono t-title">jab@core: ~/portfolio — zsh</span>
+        </div>
+        <div class="terminal-body mono" id="termOut"></div>
+      </div>
+
+      <div class="scroll-hint"><span></span></div>
+    </section>
+
+    <!-- Franja de métricas institucional -->
+    <section class="metrics-banner">
+      <div class="metric-card reveal"><span class="metric-num mono">6</span><span class="metric-label">Disciplinas unidas en un solo perfil</span></div>
+      <div class="metric-card reveal"><span class="metric-num mono">100%</span><span class="metric-label">Remoto · Freelance · Por proyecto</span></div>
+      <div class="metric-card reveal"><span class="metric-num mono">HW+SW</span><span class="metric-label">Del código al circuito y al vuelo</span></div>
+      <div class="metric-card reveal"><span class="metric-num mono">24/7</span><span class="metric-label">Alta presión disponible · respuesta ágil</span></div>
+    </section>
+
+    <!-- ============== ABOUT ============== -->
+    <section id="about" class="section">
+      <h2 class="section-title reveal">Un perfil <span class="grad">multidisciplinario.</span><br>De punta a punta.</h2>
+      <div class="about-grid">
+        <div class="glass-card reveal">
+          <span class="mono chip-blue">01 — PERFIL</span>
+          <h3>Profesional tecnológico</h3>
+          <p>Dominio de desarrollo full stack, ciberseguridad, electrónica, drones e impresión 3D industrial. Investigador nato (Eneagrama Tipo 5) con visión de pionero.</p>
+        </div>
+        <div class="glass-card reveal">
+          <span class="mono chip-blue">02 — ENFOQUE</span>
+          <h3>Ideas → soluciones de alto impacto</h3>
+          <p>Convierto ideas disruptivas en productos técnicos reales: aplicaciones web y móviles enteras, infraestructura segura, hardware a medida y fabricación en serie.</p>
+        </div>
+        <div class="glass-card reveal">
+          <span class="mono chip-blue">03 — MODALIDAD</span>
+          <h3>Remoto · Freelance · Alta presión</h3>
+          <p>Trabajo por proyecto bajo esquemas remotos e independientes, cómodo en entornos críticos y de alta presión. Disponible para reubicación cuando el proyecto lo amerita.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SKILLS (dark, estilo linux) ============== -->
+    <section id="skills" class="section dark-band">
+      <div class="band-head">
+        <h2 class="section-title reveal"><span class="mono accent-green">$ //</span> stack técnico</h2>
+        <div class="tags mono reveal">
+          <span>JavaScript</span><span>Node.js</span><span>React</span><span>Python</span>
+          <span>PHP</span><span>MySQL</span><span>MongoDB</span><span>Docker</span>
+          <span>Kali Linux</span><span>Nmap</span><span>Metasploit</span><span>Wireshark</span>
+          <span>Burp Suite</span><span>pfSense</span><span>ArduPilot</span><span>Betaflight</span>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <div class="glass-card dark-card reveal">
+          <span class="mono sk-id">01</span>
+          <h3>Full Stack Development</h3>
+          <p>Construcción end-to-end de aplicaciones web y móviles: JavaScript, Node.js, React, Python, PHP, MySQL, MongoDB y Docker. Despliegue en producción y arquitecturas escalables.</p>
+        </div>
+        <div class="glass-card dark-card reveal">
+          <span class="mono sk-id">02</span>
+          <h3>Ciberseguridad & Redes</h3>
+          <p>Hardening de infraestructura, ethical hacking y pentesting. Arquitecturas seguras, IDS/IPS, firewalls y respuesta a incidentes. Kali, Nmap, Metasploit, Wireshark, Burp Suite, pfSense.</p>
+        </div>
+        <div class="glass-card dark-card reveal">
+          <span class="mono sk-id">03</span>
+          <h3>Drones & UAV</h3>
+          <p>Piloto FPV y multirotores. Reparación avanzada de ESCs, motores brushless y flight controllers. Drones custom con ArduPilot/Betaflight, payloads industriales y vuelo autónomo.</p>
+        </div>
+      </div>
+      <div class="skills-grid second">
+        <div class="glass-card dark-card reveal">
+          <span class="mono sk-id">04</span>
+          <h3>Impresión 3D & Manufactura</h3>
+          <p>Operación experta de FDM y resina UV. Ensamble completo desde cero (Prusa, Voron, CoreXY). Capacidad para montar y operar una fábrica de piezas en serie con control de calidad industrial.</p>
+        </div>
+        <div class="glass-card dark-card reveal">
+          <span class="mono sk-id">05</span>
+          <h3>Electrónica & IoT</h3>
+          <p>Diseño de circuitos, prototipado con Arduino/ESP32, integración RFID y sistemas embebidos. Integración hardware-software para soluciones IoT a medida.</p>
+        </div>
+        <div class="glass-card dark-card reveal">
+          <span class="mono sk-id">06</span>
+          <h3>Telecom & Retroingeniería</h3>
+          <p>Servidores, enlaces punto a punto, VPN corporativas y redes Mikrotik en entornos críticos y remotos. Análisis y deconstrucción de sistemas de software y hardware.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PROYECTOS / ÁREAS (estilo Apple) ============== -->
+    <section id="projects" class="section">
+      <h2 class="section-title reveal">Especialidades <span class="grad">bajo demanda.</span></h2>
+      <div class="projects">
+        <article class="project reveal" data-tilt>
+          <div class="p-media m1"><span class="mono status-tag">END-TO-END</span><div class="p-float">Desarrollo</div></div>
+          <div class="p-body">
+            <span class="mono chip-blue">SOFTWARE</span>
+            <h3>Aplicaciones web & móviles</h3>
+            <p>Del MVP al sistema en producción: frontend, backend, base de datos, despliegue y mantenimiento. Stack moderno y arquitecturas escalables.</p>
+            <div class="stack mono">JS · Node · React · Python · MySQL · Docker</div>
+          </div>
+        </article>
+        <article class="project reveal" data-tilt>
+          <div class="p-media m2"><span class="mono status-tag">PENTESTING</span><div class="p-float">Ciberseguridad</div></div>
+          <div class="p-body">
+            <span class="mono chip-blue">SEGURIDAD</span>
+            <h3>Infraestructura blindada</h3>
+            <p>Auditorías de seguridad, pentesting, firewalls (pfSense), IDS/IPS y respuesta a incidentes. Redes MCP que no duermen: monitoreo y hardening permanente.</p>
+            <div class="stack mono">Kali · Metasploit · Wireshark · Burp · pfSense</div>
+          </div>
+        </article>
+        <article class="project reveal" data-tilt>
+          <div class="p-media m3"><span class="mono status-tag">FPV + INDUSTRIAL</span><div class="p-float">Drones & 3D</div></div>
+          <div class="p-body">
+            <span class="mono chip-blue">HARDWARE</span>
+            <h3>UAV custom & manufactura</h3>
+            <p>Drones a medida con vuelo autónomo y payloads industriales, más fábricas de impresión 3D en serie (FDM/resina) con control de calidad. Electrónica e IoT integrando el todo.</p>
+            <div class="stack mono">ArduPilot · Betaflight · Prusa/Voron/CoreXY · ESP32</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============== FORMACIÓN ============== -->
+    <section id="certs" class="section">
+      <h2 class="section-title reveal">Formación <span class="grad">& áreas de dominio.</span></h2>
+      <div class="cert-grid">
+        <div class="cert-row reveal"><span class="mono cert-id">EDU-01</span><div><h3>Ing. en Sistemas / Autodidacta</h3><p>Full stack y ciberseguridad formación práctica continuamente actualizada</p></div><span class="mono year">SW</span></div>
+        <div class="cert-row reveal"><span class="mono cert-id">EDU-02</span><div><h3>Ciberseguridad — Certificaciones</h3><p>Ethical hacking, redes seguras y respuesta a incidentes</p></div><span class="mono year">SEC</span></div>
+        <div class="cert-row reveal"><span class="mono cert-id">EDU-03</span><div><h3>Electrónica Aplicada</h3><p>Formación técnica: circuitos, prototipado y sistemas embebidos</p></div><span class="mono year">HW</span></div>
+        <div class="cert-row reveal"><span class="mono cert-id">EDU-04</span><div><h3>Manufactura 3D — Especialización</h3><p>Impresión FDM/resina, ensamble de maquinaria y producción en serie</p></div><span class="mono year">3D</span></div>
+      </div>
+      <div class="lang-band reveal">
+        <span class="mono lang-item">ESPAÑOL // NATIVO</span>
+        <span class="mono lang-item">INGLÉS TÉCNICO // AVANZADO</span>
+      </div>
+    </section>
+
+    <!-- ============== CONTACTO ============== -->
+    <section id="contact" class="section contact">
+      <h2 class="section-title reveal">Iniciemos tu próximo <span class="grad">proyecto técnico.</span></h2>
+      <div class="contact-center">
+        <div class="glass-card mono contact-side reveal" data-tilt>
+          <div class="side-block">
+            <span class="dim">jab@core:~$ whois contacto</span>
+            <p><a href="mailto:antonio.bustamante33@gmail.com">antonio.bustamante33@gmail.com</a></p>
+            <p><a href="tel:+526466871670">+52 (646) 687-1670</a></p>
+            <p class="dim">Ayamonte #1627, Culiacán, Sinaloa MX</p>
+          </div>
+          <div class="side-block">
+            <span class="dim">jab@core:~$ cat modalidad.txt</span>
+            <p class="green">● REMOTO / FREELANCE</p>
+            <p class="green">● POR PROYECTO / ALTA PRESIÓN</p>
+            <p class="green">● DISPONIBLE A REUBICACIÓN</p>
+          </div>
+          <div class="side-block">
+            <span class="dim">jab@core:~$ uptime --idiomas</span>
+            <p>Español nativo · Inglés técnico avanzado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer institucional -->
+  <footer class="insta-footer">
+    <div class="foot-grid">
+      <div><span class="logo-foot mono">⚡ J. Bustamante</span><p class="mono dim">Full Stack · Ciberseguridad · Drones & UAV · Impresión 3D · Electrónica · Telecom.</p></div>
+      <div><span class="foot-title">Secciones</span><a href="#about">Perfil</a><a href="#skills">Capacidades</a><a href="#projects">Especialidades</a></div>
+      <div><span class="foot-title">Contacto</span><a href="mailto:antonio.bustamante33@gmail.com">antonio.bustamante33@gmail.com</a><a href="tel:+526466871670">+52 (646) 687-1670</a><a href="#contact">Formulario</a></div>
+      <div><span class="foot-title">Modalidad</span><a href="#about">Remoto / Freelance</a><a href="#about">Por proyecto</a><a href="#about">Reubicación disponible</a></div>
+    </div>
+    <p class="mono dim lega">© 2026 Jesús Antonio Bustamante Araujo · Todos los derechos reservados · v3.1-hybrid · <span class="green">exit 0</span></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/scene3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

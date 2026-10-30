@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Dev — Full Stack Developer</title>
+  <meta name="description" content="Portfolio estilo Apple: desarrollador Full Stack que diseña y construye productos de punta a punta.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+  <nav class="glass-nav">
+    <span class="logo">⌘ alex.dev</span>
+    <div class="nav-links">
+      <a href="#about" class="active">Sobre mí</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact" class="pill">Contacto</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============== HERO ============== -->
+    <section id="home" class="hero">
+      <p class="eyebrow">Full Stack Developer</p>
+      <h1 class="hero-title">
+        <span class="line">Diseño.</span>
+        <span class="line">Desarrollo.</span>
+        <span class="line grad">Despliego.</span>
+      </h1>
+      <p class="hero-sub">
+        Producto completo: arquitectura, backend, frontend y la nube.
+        Con la obsesión del detalle que haría pagar a un diseñador.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn dark">Ver proyectos</a>
+        <a href="#about" class="btn light">Conocer más ›</a>
+      </div>
+      <div class="scroll-hint"><span></span></div>
+    </section>
+
+    <!-- ============== ABOUT ============== -->
+    <section id="about" class="section">
+      <h2 class="section-title reveal">Actuamos como si la web<br>fuera <span class="grad">exactamente igual.</span></h2>
+      <div class="about-grid">
+        <div class="glass-card reveal">
+          <div class="big-num">6+</div>
+          <h3>Años construyendo</h3>
+          <p>APIs, paneles, e-commerce y sistemas distribuidos. Productos de miles de usuarios, no demos.</p>
+        </div>
+        <div class="glass-card reveal">
+          <div class="big-num">42</div>
+          <h3>Proyectos entregados</h3>
+          <p>De la landing page al gateway en Go. Toda la pila, siempre pensando en el siguiente paso.</p>
+        </div>
+        <div class="glass-card reveal">
+          <div class="big-num">0</div>
+          <h3>Excusas</h3>
+          <p> pipelines que decidirán mi día. Despliegues en azul/verde, monitoreo y recuperación automática.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SKILLS ============== -->
+    <section id="skills" class="section dark">
+      <h2 class="section-title reveal">Todo mi stack,<br>fácil de entender.</h2>
+      <div class="skills-grid">
+        <div class="glass-card reveal tilt">
+          <div class="icon">🖥</div>
+          <h3>Frontend</h3>
+          <p class="tags">React · Vue · TypeScript · Tailwind · Three.js</p>
+        </div>
+        <div class="glass-card reveal tilt">
+          <div class="icon">⚙️</div>
+          <h3>Backend</h3>
+          <p class="tags">Node.js · Django · Go · GraphQL · WebSockets</p>
+        </div>
+        <div class="glass-card reveal tilt">
+          <div class="icon">🗄</div>
+          <h3>Datos</h3>
+          <p class="tags">PostgreSQL · MongoDB · Redis · IndexedDB</p>
+        </div>
+        <div class="glass-card reveal tilt">
+          <div class="icon">☁️</div>
+          <h3>DevOps</h3>
+          <p class="tags">Linux · Docker · AWS · CI/CD · Nginx</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PROJECTS ============== -->
+    <section id="projects" class="section">
+      <h2 class="section-title reveal">Lo mejor<br><span class="grad">hasta ahora.</span></h2>
+      <div class="projects">
+        <article class="project reveal tilt">
+          <div class="p-media m1"><div class="p-float">SyncPanel CRM</div></div>
+          <div class="p-body">
+            <span class="chip">Tiempo real</span>
+            <h3>SyncPanel CRM</h3>
+            <p>Panel de clientes en vivo con WebSockets, roles, dashboards y API REST documentada.</p>
+            <div class="stack">React · Node.js · PostgreSQL</div>
+          </div>
+        </article>
+        <article class="project reveal tilt">
+          <div class="p-media m2"><div class="p-float">conceal</div></div>
+          <div class="p-body">
+            <span class="chip">Infraestructura</span>
+            <h3>conceal — API Gateway</h3>
+            <p>Gateway en Go: rate limiting, JWT y proxy inverso. 10k req/s en una instancia.</p>
+            <div class="stack">Go · Docker · Redis</div>
+          </div>
+        </article>
+        <article class="project reveal tilt">
+          <div class="p-media m3"><div class="p-float">MatrixNotes</div></div>
+          <div class="p-body">
+            <span class="chip">Privacidad</span>
+            <h3>MatrixNotes</h3>
+            <p>Notas cifradas extremo a extremo con Web Crypto API. Zero-knowledge, offline-first.</p>
+            <div class="stack">TypeScript · Web Crypto · IndexedDB</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT ============== -->
+    <section id="contact" class="section contact">
+      <h2 class="section-title reveal">Hablemos de<br>tu próximo <span class="grad">producto.</span></h2>
+      <p class="contact-sub reveal">Respuesta en menos de 24 h. Sin formularios eternos.</p>
+      <a href="mailto:alex@fullstack.dev" class="btn dark big reveal">alex@fullstack.dev</a>
+      <div class="socials reveal">
+        <a href="#">GitHub ›</a><a href="#">LinkedIn ›</a><a href="#">Twitter ›</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>⌘ Alex Dev — Diseñado y desarrollado con cariño obsesivo. © 2026</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/scene3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
